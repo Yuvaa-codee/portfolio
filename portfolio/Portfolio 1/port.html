@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<title>Portfolio 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+.port-row-padding img {
+    margin-bottom: 12px;
+}
+.port-bgimg {
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url('images.jpeg');
+    min-height: 100%;
+    
+}
+.port-sidebar {
+    display: none;
+    padding-top: 150px;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    font-size: xx-large;
+}
+.port-sidebar a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #3572EF;
+}
+.port-sidebar a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.port-main {
+    padding: 16px;
+    margin-left: 40%;
+}
+.port-button {
+    padding: 16px;
+    margin-top: 16px;
+    background-color: #3ABEF9;
+    border: none;
+    cursor: pointer;
+}
+.port-button:hover {
+    background-color: #3572EF;
+}
+.port-header {
+    text-align: center;
+    padding: 128px 16px;
+}
+.port-content {
+    padding: 32px;
+    color: #000000;
+}
+.port-light-grey {
+    background-color: #A7E6FF;
+}
+.port-dark-grey {
+    background-color: #3572EF;
+    color: rgb(255, 255, 255);
+}
+.port-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.port-grid-half {
+    flex: 50%;
+    padding: 0 16px;
+}
+.port-grid-quarter {
+    flex: 25%;
+    padding: 16px;
+}
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+.port-center {
+    text-align: center;
+}
+.port-section {
+    padding: 32px 0;
+}
+.port-contact-form input, .port-contact-form button {
+    width: 100%;
+    padding: 16px;
+    margin: 8px 0;
+    border: 1px solid #3572EF;
+    border-radius: 8px;
+}
+.port-contact-form button {
+    background-color: #3ABEF9;
+    cursor: pointer;
+}
+.port-contact-form button:hover {
+    background-color: #3572EF;
+}
+.port-footer {
+    padding: 64px;
+    background-color: #3ABEF9;
+    text-align: center;
+    font-size: x-large;
+}
+.port-footer i {
+    padding: 8px;
+    cursor: pointer;
+}
+.port-footer i:hover {
+    opacity: 0.7;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="port-bgimg" style="width:40%; position: fixed; height: 100%;"></nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="port-sidebar" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" style="font-size:48px; padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div>
+    <a href="#about" onclick="closeNav()">Skills</a>
+    <a href="#work" onclick="closeNav()">Work Experience</a>
+    <a href="#cert" onclick="closeNav()">Certification</a>
+    <a href="#project" onclick="closeNav()">Projects</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="port-main">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="port-button" style="position:fixed; top:0; right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="port-header" id="home">
+    <h1 class="port-jumbo"><b>NAME</b></h1>
+    <h2>Specify your job.</h2>
+    
+    <button class="port-button">
+      <h4 ><i class="fa fa-download"></i> Download Resume </h4>
+    </button>
+  </header>
+
+ <hr>
+ 
+  <!-- About Section -->
+  <div class="port-content" id="about">
+    <h2>About</h2>
+    
+    <h4>Some text about you. 
+    </h4>
+    <hr>
+    <h2 class="port-padding-16">My Skills</h2>
+    <p class="port-wide">Photography</p>
+    <div class="port-light-grey">
+      <div class="port-center port-padding-small port-dark-grey" style="width:95%">95%</div>
+    </div>
+    <p class="port-wide">Web Design</p>
+    <div class="port-light-grey">
+      <div class="port-center port-padding-small port-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="port-wide">Photoshop</p>
+    <div class="port-light-grey">
+      <div class="port-center port-padding-small port-dark-grey" style="width:80%">80%</div>
+    </div><br>
+
+    
+<hr>
+    
+<div id="work">
+    <!-- Testimonials -->
+    <h2 class="port-padding-24">Work Experience</h3>
+    <div>
+      <img src="work.jpeg" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+      <h3><span class="port-large port-text-black port-margin-right">Company Name</span> </h3>
+      <h5>About Work Experience</h5><br>
+    </div>
+    <div>
+      <img src="work.jpeg" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+      <h3><span class="port-large port-text-black port-margin-right">Company Name</span> </h3>
+      <h5>About Work Experience</h5><br>
+    </div>
+    <div>
+      <img src="work.jpeg" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+      <h3><span class="port-large port-text-black port-margin-right">Company Name</span> </h3>
+      <h5>About Work Experience</h5><br>
+    </div>
+    
+  </div>
+  </div>
+  <hr>
+<div id="cert">
+  <!-- Pricing Section -->
+  <div class="port-content">
+    <h2>Certification And Achivements</h2>
+    
+    <div class="port-grid">
+      <div class="port-grid-half port-margin-bottom">
+        <ul class="port-ul port-center port-card port-hover-shadow">
+          <li class="port-dark-grey port-xlarge port-padding-32">Certification</li>
+          <li class="port-padding-16">Certification 1</li>
+          <li class="port-padding-16">Certification 2</li>
+          <li class="port-padding-16">Certification 3</li>
+          <li class="port-padding-16">Certification 4</li>
+          
+          <li class="port-light-grey port-padding-24">
+            <button class="port-button">View</button>
+          </li>
+        </ul>
+      </div>
+      <div class="port-grid-half">
+        <ul class="port-ul port-center port-card port-hover-shadow">
+          <li class="port-dark-grey port-xlarge port-padding-32">Achivements</li>
+          <li class="port-padding-16">Achivements 1</li>
+          <li class="port-padding-16">Achivements 2</li>
+          <li class="port-padding-16">Achivements 3</li>
+          <li class="port-padding-16">Achivements 4</li>
+          
+          <li class="port-light-grey port-padding-24">
+            <button class="port-button">View</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    </div>
+    <div id="project">
+    <h2 class="port-padding-24">Projects</h3>
+      <div>
+        <img src="pro.png" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+        <h3><span class="port-large port-text-black port-margin-right">Project Name</span></h3>
+        <h5>About project</h5><br>
+        
+        
+      </div>
+      <div>
+        <img src="pro.png" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+        <h3><span class="port-large port-text-black port-margin-right">Project Name</span></h3>
+        <h5>About project</h5><br>
+      </div>
+      <div>
+        <img src="pro.png" alt="Avatar" style="width:80px; float: left; margin-right: 16px; border-radius: 50%;">
+        <h3><span class="port-large port-text-black port-margin-right">Project Name</span></h3>
+        <h5>About project</h5><br>
+      </div>
+      <button class="port-button">
+        <i class="fa fa-download"></i> View Project
+      </button>
+  </div>
+  </div>
+  <hr>
+<div id="contect">
+  <!-- Contact Section -->
+  <div class="port-content" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    
+
+    <div class="port-section">
+      <p><i class="fa fa-map-marker fa-fw port-xxlarge port-margin-right"></i> Location</p>
+      <p><i class="fa fa-phone fa-fw port-xxlarge port-margin-right"></i> Phone: +0123456789</p>
+      <p><i class="fa fa-envelope fa-fw port-xxlarge port-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-linkedin fa-fw port-xxlarge port-margin-right"> </i> Linkedin</p>
+    </div>
+    
+    
+    
+  </div>  
+</div>
+
+  <!-- Footer -->
+  <footer class="port-footer">
+    <i class="fa fa-facebook-official port-hover-opacity"></i>
+    <i class="fa fa-github port-hover-opacity"></i>
+    <i class="fa fa-twitter port-hover-opacity"></i>
+    <i class="fa fa-linkedin port-hover-opacity"></i>
+    
+  </footer>
+  
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
